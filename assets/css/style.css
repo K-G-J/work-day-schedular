@@ -43,11 +43,13 @@ ul {
   height: 100%;
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
 }
 ul li {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  padding: 20px;
+  padding: 10px;
   justify-content: space-around;
 }
 

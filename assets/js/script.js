@@ -17,6 +17,9 @@ var checkTime = setInterval(() => {
 $(".saveBtn").click(function(event) {
   var eventHour = $(this).siblings(".hour").html()
   var eventText = $(this).siblings("input[name=event-input]").val().trim()
+  if (!eventText) {
+    window.location.reload();
+  }
   $("input[name=event-input]").val("");
   var calEventObj = {
     text: eventText,
