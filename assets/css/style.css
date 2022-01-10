@@ -39,10 +39,16 @@ textarea {
   border-top: 1px solid white;
   height: 80%;
 }
+ul {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
 ul li {
   display: flex;
   flex-wrap: wrap;
-  padding: 10px;
+  padding: 20px;
+  justify-content: space-around;
 }
 
 .hour {
@@ -52,9 +58,17 @@ ul li {
   width: 8%;
   text-align: center;
   padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
 }
 .hour-sd {
   padding-right: 22px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.event-form {
+  display: none;
+  width: 100%;
 }
 .past {
   background-color: #d3d3d3;
@@ -77,6 +91,12 @@ ul li {
   border-bottom-right-radius: 15px;
   background-color: #06AED5;
   color: white;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 8%;
 }
 
 .saveBtn i:hover {

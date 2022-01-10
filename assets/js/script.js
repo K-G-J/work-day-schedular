@@ -6,12 +6,23 @@ var checkTime = setInterval(() => {
     auditTime();
   }, (1000));
 
+  $(document).ready(function() {
+    $(".event-list").click(function(){
+       $("input[name=event-input]").toggle( 'slow', function(){
+       });
+    });
+ });
+
 
 // setting and getting calendar events 
 $(".saveBtn").click(function(event) {
   var eventHour = $(this).siblings(".hour").html()
   var eventText = $(this).siblings("input[name=event-input]").val().trim()
   $("input[name=event-input]").val("");
+  $(this).click(function(){
+    $("input[name=event-input]").toggle( 'slow', function(){
+    });
+ });
   var calEventObj = {
     text: eventText,
     hour: eventHour
@@ -20,6 +31,7 @@ $(".saveBtn").click(function(event) {
     var calEventLi = document.createElement("li")
     calEventLi.textContent = calEventObj.text
     $("#list-" + calEventObj.hour).append(calEventLi);
+
   });
 function saveCalEvent(calEventObj) {
   var currentEvents = loadCalEvents();
